@@ -37,7 +37,7 @@ function UpdateValue(){
 function CreateTowns(){
 	var slidervalue =  document.getElementById("SizeSlider").value;
 	var datalink = 'http://34.78.46.186/Circles/Towns/'+slidervalue;
-	svg.selectAll("circle").transition().duration(300).style("opacity", 0);
+	svg.selectAll("circle").transition().duration(600).style("opacity", 0);
 	svg.selectAll("circle").remove();
 	d3.json(datalink).then(function(d){
 		svg.selectAll("circle").data(d).enter().append("circle")
@@ -48,7 +48,7 @@ function CreateTowns(){
 		.attr("onmouseout", function(data){var msg = "hideToolTip();"; return msg;})
 		.style("opacity", 0)
 		.transition()
-		.duration(300)
+		.duration(600)
 		.style("opacity", 0.7)
 	});
 }

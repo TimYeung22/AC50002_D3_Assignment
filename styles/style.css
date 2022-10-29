@@ -7,7 +7,9 @@ circle{
 	stroke-width:2px;
 }
 #Tooltip{
-	background-color:black;
+	background-color:rgba(0,0,0,0.4);
+	border-style:solid;
+	border-color:black;
 	color:white;
 	font-size:25px;
 	text-align:center;
@@ -15,8 +17,9 @@ circle{
 .SliderBox{
 	width: 500px;
 	height: 180px;	
-	margin: auto;
+	margin: 20px auto;
 	border-style:solid;
+	border-width:3px;
 }
 .SliderBox div{
 	font-size: 25px;
@@ -34,4 +37,5 @@ circle{
 	margin: auto;
 	background-color:#8db8df;
 	border-style:solid;
+	border-width:5px;
 }
