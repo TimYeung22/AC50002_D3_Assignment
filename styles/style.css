@@ -2,7 +2,7 @@ path {
 	fill:#52b634;
 }
 circle{
-	fill:red;
+	fill:#d93235;
 	stroke:black;
 	stroke-width:2px;
 }
@@ -29,9 +29,9 @@ circle{
 	font-size: 20px;
 }
 .SliderBox input{
-	width: 200px;
+	width: 300px;
 }
-.map{
+.Map{
 	width: 1500px;
 	height: 2000px;	
 	margin: auto;
