@@ -6,13 +6,28 @@ circle{
 	stroke:black;
 	stroke-width:2px;
 }
+#boundary{
+	height:2000px;
+	width:1500px;
+	margin:auto;
+}
+#Map{
+	height:2000px;
+	width:1500px;
+	margin:auto;
+	position:absolute;
+	z-index:-1;
+}
 #Tooltip{
 	background-color:rgba(0,0,0,0.4);
+	max-width:400px;
 	border-style:solid;
 	border-color:black;
 	color:white;
 	font-size:25px;
 	text-align:center;
+	z-index:2;
+	position:relative;
 }
 .SliderBox{
 	width: 500px;

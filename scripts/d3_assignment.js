@@ -6,12 +6,14 @@ var svg = d3.select("svg");
 var projection = d3.geoMercator().scale(5500).center([-7,60]);
 var pathGenerator = d3.geoPath().projection(projection);
 var ukmap = 'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/united-kingdom/uk-counties.json';
+function Drawmap(){
 d3.json(ukmap).then(data =>{ 
 	console.log(data);
 	var cities = topojson.feature(data, data.objects.GBR_adm2);
-	svg.selectAll("path").data(cities.features).enter().append("path").attr("d", pathGenerator);
-	console.log(cities.features); 	 	
+	svg.selectAll("path").data(cities.features).enter().append("path").attr("d", pathGenerator); 	
+	CreateTowns();
 });
+}
 function ChangeSlider(n){
 	var slidervalue =  document.getElementById("SizeSlider").value;
 	document.getElementById("SizeSlider").value = parseInt(slidervalue) + n;
@@ -22,8 +24,8 @@ function showTooltip(x,y,text){
 	let tooltip = document.getElementById("Tooltip");
 	tooltip.innerHTML = "<text>"+text+"</text>";
 	tooltip.style.display = "block";
-	tooltip.style.left = x + "px";
-	tooltip.style.top = y + 140 + "px";
+	tooltip.style.left = x + 15 + "px";
+	tooltip.style.top = y - 2080 + "px";
 }
 function hideToolTip(){
 	let tooltip = document.getElementById("Tooltip");
@@ -52,6 +54,6 @@ function CreateTowns(){
 		.style("opacity", 0.7)
 	});
 }
+window.onload=Drawmap();
 window.onload=UpdateValue();
-window.onload=CreateTowns();
 
